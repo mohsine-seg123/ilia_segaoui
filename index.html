@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <audio id="click-sound" src="son/clique.wav" preload="auto"></audio>
+        <div class="nav container">
+             <a href="#" class="logo">ILIA</a>
+             <div class="navbar">
+                <a href="#home"  class="nav-link">Accueil</a>
+                <a href="#aboutus"  class="nav-link">À propos</a>
+                <a href="#courses" class="nav-link">Programme</a>
+                <a href="#clubs" class="nav-link">Club</a>
+                <a href="#contact" class="nav-link">Contact</a>
+             </div>
+                 <div class="nav-right">
+                         <i class="ri-brain-line"></i>
+               </div>
+        </div>
+    </header>
+
+
+
+     <div id="chatbot-icon">🤖</div>
+     <div id="chatbot-container" class="hidden">
+        <div id="chatbot-header">
+            <span>ChatBot</span>
+            <button id="close-btn">&times;</button>
+        </div>
+        <div id="chatbot-body">
+           <div id="chatbot-messages"></div>
+        </div>
+        <div id="chatbot-input-container">
+              <input type="text" id="chatbot-input" placeholder="Type a message...">
+              <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+
+<section class="hero page active" id="home">
+     <video class="back-vid" loop autoplay muted playsinline>
+         <source src="videos/galaxy.mp4" type="video/mp4">
+    </video>
+     <div class="icons-vid2">
+ <video class="front-vid" loop autoplay muted plays-inline src="videos/hero-video.mp4" type="video/mp4"></video>
+     </div>
+
+  <div class="hero-content">
+    <div class="para">
+        <h1>    <i class="fas fa-robot"></i> Master <span class="gradient">IT</span> & <span class="gradient" >AI</span> Skills at <span class="gradient ilia">ILIA</span></h1>
+    </div>
+
+<div class="hero-main">
+    <div>
+        <i class="fas fa-calendar-alt"></i> 3 ans
+    </div>
+    <div>
+        <i class="fas fa-book"></i> 6 semesteres
+    </div>
+    <div>
+        <i class="fas fa-clipboard-list"></i> 35 modules
+    </div>
+</div>
+
+   <div class="hero-cta">
+    <a href="#skills" class="btn-primary">
+        <i class="fas fa-graduation-cap"></i>Skill Insights <span class="btn-icon">→</span>
+    </a>
+    <a href="#contact" class="btn-secondary">
+        <i class="fas fa-envelope"></i> Contact <span class="btn-icon">→</span>
+    </a>
+</div>
+  </div>
+</section>
+
+
+<section id="aboutus" class="aboutus page active">
+   <video class="back-vid" loop autoplay muted playsinline>
+         <source src="videos/galaxy.mp4" type="video/mp4">
+    </video>
+ <div class="scroll-down-skills"></div>
+ <h1 class="tit">Bonjour 👋</h1>
+ <div class="ilia1">
+ <div class="ilia1-titles">
+   <div class="ilia1-tit1">
+     <i class="bx bx-code-block"></i>
+      software engineering
+   </div>
+    <div class="ilia1-tit2">
+     <i class="bx bxs-brain"></i>
+  artificial intelligence
+ </div>
+ </div>
+    <h1><span class="gradient">Software engineering</span> augmenté par <span class="gradient">l’IA</span> 🚀 <span class="gradient">l’IT</span> entre dans une <span class="gradient">nouvelle ère..</span></h1>
+    <p>
+     Dans un monde où l’IA transforme les processus, nous rêvons 
+  d’un futur numérique plus intelligent et plus agile.
+  </p>
+    <div class="content-about">
+        <div class="profil-section">
+            <h2 class="profil-title">Profils Visés par la Formation</h2>
+            <div class="arrow-horizontal"></div>
+            <span class="multiple-text"></span>
+        </div>
+      </div>
+     <button >Contact us<i class="bx bx-send"></i></button>
+ </div>
+
+ <div class="icons-vid">
+ <video class="front-vid" loop autoplay muted plays-inline src="videos/hero-video.mp4" type="video/mp4"></video>
+ </div>
+ <div class="scroll-down"></div>
+
+ <div class="ensa-fes">
+
+ <h1 class="sectionTitle">L'ecole 🏢</h1>
+<div class="info-cards">
+    <div class="card1">
+        <p>L'ENSA de Fès, composante de l’Université Sidi Mohamed Ben Abdellah, est une école d’ingénieurs de l'enseignement supérieur publique créée en 2005, assurant une formation des ingénieurs d’état avec un cursus de Bac+5.</p>
+        <img src="images/image.png" alt="card-image">
+        <div class="icons">
+          <a href="#"><i class='bx bxs-phone'></i>05.35.60.04.03</a>
+          <a href="#"><i class='bx bxl-gmail'></i>ensaf@usmba.ac.ma</a>
+          <a href="#"><i class='bx bx-globe'></i>ensaf.ac.ma</a>
+        </div>
+         </div>
+        <div class="card2">
+        <h1>Les filières Ci</h1>
+        <img src="images/filieres..png" alt="card-image">
+          <div class="filieres-tags">
+    <a href="pdf/3IACN.pdf" download>
+        <span class="tag" title="Ingénierie Informatique, Intelligence Artificielle et Confiance Numérique">3IACN</span>
+    </a>
+    <a href="pdf/ISEIA.pdf" download>
+        <span class="tag" title="Ingénierie des Systèmes Embarqués et Intelligence Artificielle">ISEIA</span>
+    </a>
+    <a href="pdf/ILIA.pdf" download>
+        <span class="tag" title="Ingénierie Logiciele et L'intelligence artificielle">ILIA</span>
+    </a>
+    <a href="pdf/INFO.pdf" download>
+        <span class="tag" title="Génie Informatique">INFO</span>
+    </a>
+    <a href="pdf/DNC.pdf" download>
+        <span class="tag" title="Génie du Développement numérique et Cybersécurité">DNC</span>
+    </a>
+    <a href="pdf/ISDIA.pdf" download>
+        <span class="tag" title="Ingénierie en Science de Données et Intelligence Artificielle">ISDIA</span>
+    </a>
+    <a href="pdf/gind.pdf" download>
+        <span class="tag" title="Génie Industriel">INDUS</span>
+    </a>
+    <a href="pdf/ISCSN.pdf" download>
+        <span class="tag" title="Génie des Systèmes Communicants et Sécurité Informatique">ISCSN</span>
+    </a>
+    <a href="pdf/GMT.pdf" download>
+        <span class="tag" title="Génie Mécanique">GM</span>
+    </a>
+    <a href="pdf/GMT (1).pdf" download>
+        <span class="tag" title="Génie Mécatronique">GMT</span>
+    </a>
+</div>
+    </div>
+</div>
+</div>
+</section>
+
+
+
+
+ <section class="skills" id="skills">
+        <div class="scroll-down-skills"></div>
+        <h1 class="skills-title autoDisplay">Skills👨‍💻​</h1>
+        <div class="skills-content autoBlur">
+            <div class="IA fadein-left">
+                <h1 class="gradient autoDisplay">IA <i class='bx bxs-brain'></i></h1>
+                <div class="ia-tech-badges">
+                    <span class="tech-tag" title="Python">Python</span>
+                    <span class="tech-tag" title="TensorFlow">TensorFlow</span>
+                    <span class="tech-tag" title="Keras">Keras</span>
+                    <span class="tech-tag" title="PyTorch">PyTorch</span>
+                    <span class="tech-tag" title="Scikit-learn">Scikit-learn</span>
+                    <span class="tech-tag" title="R">R</span>
+                    <span class="tech-tag" title="Numpy">NumPy</span>
+                    <span class="tech-tag" title="Pandas">Pandas</span>
+                    <span class="tech-tag" title="Machine Learning">ML</span>
+                    <span class="tech-tag" title="Reinforcement Learning">RL</span>
+                    <span class="tech-tag" title="Deep Learning">DL</span>
+                    <span class="tech-tag" title="Natural Language Processing">NLP</span>
+                    <span class="tech-tag" title="Computer Vision">CV</span>
+                    <span class="tech-tag" title="Generative AI">GenAI</span>
+                    <span class="tech-tag" title="Machine Learning Operations">MLOps</span>
+                    <span class="tech-tag" title="Éthique de l'Intelligence Artificielle">Éthique IA</span>
+                    <span class="tech-tag" title="Big Data">Big Data</span>
+                </div>
+            </div>
+            <div class="skills-image">
+                <img class="brain-img" src="images/brain1.png" alt="AI Brain">
+            </div>
+            <div class="Dev fadein-left">
+                <h1 class="gradient autoDisplay">Dev<i class='bx bx-code-alt'></i></h1>
+                <div class="dev-tech-badges">
+                    <span class="tech-tag" title="HTML5">HTML5</span>
+                    <span class="tech-tag" title="CSS3">CSS3</span>
+                    <span class="tech-tag" title="JavaScript">JavaScript</span>
+                    <span class="tech-tag" title="ReactJs">ReactJs</span>
+                    <span class="tech-tag" title="Node.js">Node.js</span>
+                    <span class="tech-tag" title="Express.js">Express.js</span>
+                    <span class="tech-tag" title="Java">Java</span>
+                    <span class="tech-tag" title="Spring">Spring</span>
+                    <span class="tech-tag" title="C">C</span>
+                    <span class="tech-tag" title="MongoDB">MongoDB</span>
+                    <span class="tech-tag" title="MySQL">MySQL</span>
+                    <span class="tech-tag" title="PostgreSQL">PostgreSQL</span>
+                    <span class="tech-tag" title="Oracle">Oracle</span>
+                    <span class="tech-tag" title="Git">Git</span>
+                    <span class="tech-tag" title="Docker">Docker</span>
+                    <span class="tech-tag" title="Kubernetes">Kubernetes</span>
+                    <span class="tech-tag" title="Cloud">Cloud</span>
+                    <span class="tech-tag" title="Development and Operations">DevOps</span>
+                </div>
+            </div>
+            <div class="slider" reverse="true" style="
+                 --width: 100px;
+                 --height: 100px;
+                 --quantity: 30;
+                 ">
+                <div class="list">
+                    <div class="item" style="--position: 1"><img src="imgslidere/1.png" alt=""></div>
+                    <div class="item" style="--position: 2"><img src="imgslidere/2.png" alt=""></div>
+                    <div class="item" style="--position: 3"><img src="imgslidere/3.png" alt=""></div>
+                    <div class="item" style="--position: 4"><img src="imgslidere/4.png" alt=""></div>
+                    <div class="item" style="--position: 5"><img src="imgslidere/5.png" alt=""></div>
+                    <div class="item" style="--position: 6"><img src="imgslidere/6.png" alt=""></div>
+                    <div class="item" style="--position: 7"><img src="imgslidere/7.png" alt=""></div>
+                    <div class="item" style="--position: 8"><img src="imgslidere/8.png" alt=""></div>
+                    <div class="item" style="--position: 9"><img src="imgslidere/9.png" alt=""></div>
+                    <div class="item" style="--position: 10"><img src="imgslidere/10.png" alt=""></div>
+                    <div class="item" style="--position: 11"><img src="imgslidere/11.png" alt=""></div>
+                    <div class="item" style="--position: 12"><img src="imgslidere/12.png" alt=""></div>
+                    <div class="item" style="--position: 13"><img src="imgslidere/13.png" alt=""></div>
+                    <div class="item" style="--position: 14"><img src="imgslidere/14.png" alt=""></div>
+                    <div class="item" style="--position: 15"><img src="imgslidere/15.png" alt=""></div>
+                    <div class="item" style="--position: 16"><img src="imgslidere/16.png" alt=""></div>
+                    <div class="item" style="--position: 17"><img src="imgslidere/17.png" alt=""></div>
+                    <div class="item" style="--position: 18"><img src="imgslidere/18.png" alt=""></div>
+                    <div class="item" style="--position: 19"><img src="imgslidere/19.png" alt=""></div>
+                    <div class="item" style="--position: 20"><img src="imgslidere/20.png" alt=""></div>
+                    <div class="item" style="--position: 21"><img src="imgslidere/21.png" alt=""></div>
+                    <div class="item" style="--position: 22"><img src="imgslidere/22.png" alt=""></div>
+                    <div class="item" style="--position: 23"><img src="imgslidere/23.png" alt=""></div>
+                    <div class="item" style="--position: 24"><img src="imgslidere/24.png" alt=""></div>
+                    <div class="item" style="--position: 25"><img src="imgslidere/25.png" alt=""></div>
+                    <div class="item" style="--position: 26"><img src="imgslidere/26.png" alt=""></div>
+                    <div class="item" style="--position: 28"><img src="imgslidere/28.png" alt=""></div>
+                    <div class="item" style="--position: 29"><img src="imgslidere/29.png" alt=""></div>
+                    <div class="item" style="--position: 30"><img src="imgslidere/30.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="courses page active" id="courses">
+     <video class="back-vid" loop autoplay muted playsinline>
+         <source src="videos/galaxy.mp4" type="video/mp4">
+    </video>
+    <h2 class="content1"> 💻 Programme de Formation - 3 ans</h2>
+    <p class="content2">
+  À <span>ILIA</span>, nous étudions le Génie Logiciel et l’Intelligence Artificielle à travers 7 modules académiques.
+  Chaque <span>semestre</span>, nous explorons un modèle de langage, alliant innovation, théorie,
+  et pratique afin de renforcer notre expertise.  
+</p>
+
+    <div class="choises">
+        <button class="choise1" type="button" >1eme anne</button>
+        <button class="choise2" type="button">2eme anne</button>
+        <button class="choise3" type="button">3eme anne</button>
+    </div>
+
+
+    <div class="modules year1 active">
+       <div class="semestre">
+            <div class="haut">
+                <div class="gauch">Semestre 1</div>
+                <div class="droit">7 modules</div>
+            </div>
+            <div class="modul">
+            <div><i class="fa-brands fa-java"></i>  POO Java</div>
+            <div><i class="fa-solid fa-network-wired"></i>  Réseaux et administration LINUX</div>
+            <div><i class="fa-solid fa-code"></i>  Technologie web front & Dev Mobile</div>
+            <div><i class="fa-solid fa-microchip"></i>  Architecture des processeurs</div>
+            <div><i class="fa-solid fa-chart-line"></i>  Statistiques et Probabilités Avancées</div>
+            <div><i class="fa-solid fa-laptop-code"></i>  Compétences numériques et informatique</div>
+            <div><i class="fas fa-language"></i>  Langue</div>
+            </div>
+       </div>
+
+       <div class="semestre">
+            <div class="haut">
+                <div class="gauch">Semestre 2</div>
+                <div class="droit">7 modules</div>
+            </div>
+            <div class="modul"> 
+            <div><i class="fa-solid fa-database"></i> Systèmes d'information et Bases de données</div>
+            <div><i class="fa-solid fa-wave-square"></i> Traitement du signal</div>
+            <div><i class="fa-solid fa-server"></i> Technologie web backend</div>
+            <div><i class="fa-solid fa-robot"></i> Python et Frameworks IA</div>
+            <div><i class="fa-solid fa-square-root-variable"></i> Statistiques inférentielles et Processus Stochastiques</div>
+            <div><i class="fa-solid fa-industry"></i> Compétences de culture industrielle</div>
+            <div><i class="fas fa-language"></i> Langue</div>
+            </div>
+       </div>
+    </div>
+
+    <div class="modules year2">
+       <div class="semestre">
+            <div class="haut">
+                <div class="gauch">Semestre 3</div>
+                <div class="droit">7 modules</div>
+            </div>
+           <div class="modul">
+    <div><i class="fa-solid fa-robot"></i> Machine Learning</div>
+    <div><i class="fa-solid fa-database"></i> Administration des Bases de Données Oracle et NoSQL</div>
+    <div><i class="fa-solid fa-diagram-project"></i> Modélisation Avancée en UML et Ingénierie des modèles</div>
+    <div><i class="fa-solid fa-server"></i> JEE / Spring et Frameworks</div>
+    <div><i class="fa-solid fa-brain"></i> Fondements Théoriques de l'IA</div>
+    <div><i class="fa-solid fa-microchip"></i> Technologies d'Intelligence Artificielle</div>
+    <div><i class="fa-solid fa-language"></i> Langue</div>
+          </div>
+
+       </div>
+
+       <div class="semestre">
+            <div class="haut">
+                <div class="gauch">Semestre 4</div>
+                <div class="droit">7 modules</div>
+            </div>
+           <div class="modul"> 
+    <div><i class="fa-solid fa-eye"></i> Computer Vision</div>
+    <div><i class="fa-solid fa-network-wired"></i> Administration Réseaux et Cybersécurité</div>
+    <div><i class="fa-solid fa-robot"></i> Apprentissage par Renforcement</div>
+    <div><i class="fa-solid fa-cloud"></i> Cloud Computing et IoT</div>
+    <div><i class="fa-solid fa-chart-simple"></i> Big Data et Technologies Associées</div>
+    <div><i class="fa-solid fa-briefcase"></i> Gestion de projets et des entreprises</div>
+    <div><i class="fas fa-language"></i> Langue</div>
+</div>
+       </div>
+    </div>
+
+
+    <div class="modules year3 ">
+       <div class="semestre">
+            <div class="haut">
+                <div class="gauch">Semestre 5</div>
+                <div class="droit">7 modules</div>
+            </div>
+           <div class="modul">
+    <div><i class="fa-solid fa-chart-pie"></i> Business Intelligence and Knowledge Discovery</div>
+    <div><i class="fa-solid fa-brain"></i> Traitement Automatique du Langage Naturel</div>
+    <div><i class="fa-solid fa-cogs"></i> DevOps</div>
+    <div><i class="fa-solid fa-robot"></i> Intelligence Artificielle Générative</div>
+    <div><i class="fa-solid fa-clipboard-check"></i> Progiciel de gestion et Tests logiciels</div>
+    <div><i class="fa-solid fa-user-gear"></i> Développement personnel dans le monde industriel</div>
+    <div><i class="fas fa-language"></i> Langue</div>
+           </div>
+       </div>
+
+       <div class="semestre semestree">
+            <p>STAGE PFE 6 mois</p>
+       </div>  
+    </div>
+
+<div class="downloads">
+    <a href="pdf/Capture.pdf" download>
+        <button class="download-btn">
+            <i class="fa-solid fa-download"></i> Télécharger le programme complet (3 ans)
+        </button>
+    </a>
+</div>
+</section>
+
+
+
+<section class="Section clubs" id="clubs">
+    <h2 class="gradient"><i class="fas fa-users"></i> Club ILIA</h2>
+    <p class="section-subtitle">Découvrez les activités, projets et moments forts de notre club</p>
+
+   <div class="sub-section">
+    <h3><i class="fas fa-calendar-alt"></i> Nos Activités</h3>
+    <div class="grid" id="activities-container">
+        <div class="gris card">
+            <i class="fas fa-gamepad"></i> Hackathon de Jeu Vidéo
+        </div>
+        <div class="gris card">
+            <i class="fas fa-laptop-code"></i> Atelier Programmation
+        </div>
+        <div class="gris card">
+            <i class="fas fa-trophy"></i> Tournoi Esports Interne
+        </div>
+    </div>
+</div>
+
+
+   <div class="sub-section">
+    <h3><i class="fas fa-project-diagram"></i> Projets Réalisés</h3>
+    <div class="grid" id="projects-container">
+        <div class="gris card">
+            <i class="fas fa-robot"></i> Jeu de plateforme en Python
+        </div>
+        <div class="gris card">
+            <i class="fas fa-network-wired"></i> Site Web pour communauté gamers
+        </div>
+        <div class="gris card">
+            <i class="fas fa-mobile-alt"></i> Application mobile de suivi de tournois Esports
+        </div>
+    </div>
+</div>
+
+
+   <div class="sub-section">
+    <h3><i class="fas fa-images"></i> Galerie Photo</h3>
+    <div class="gallery" id="gallery-container">
+        <div class="gallery-item"><img src="club/img1.jpg" alt="Club Photo 1"></div>
+        <div class="gallery-item"><img src="club/img2.jpg" alt="Club Photo 2"></div>
+        <div class="gallery-item"><img src="club/img3.jpg" alt="Club Photo 3"></div>
+        <div class="gallery-item"><img src="club/img4.jpg" alt="Club Photo 4"></div>
+
+           <div class="gallery-item"><img src="club/img1.jpg" alt="Club Photo 1"></div>
+            <div class="gallery-item"><img src="club/img2.jpg" alt="Club Photo 2"></div>
+            <div class="gallery-item"><img src="club/img3.jpg" alt="Club Photo 3"></div>
+            <div class="gallery-item"><img src="club/img4.jpg" alt="Club Photo 4"></div>
+    </div>
+</div>
+
+
+    <div class="upload-form">
+        <h3><i class="fas fa-plus-circle"></i> Ajouter du Contenu</h3>
+        
+        <div class="form-group">
+            <i class="fas fa-tag"></i>
+            <select id="content-type">
+                <option value="activity">Activité</option>
+                <option value="project">Projet</option>
+                <option value="gallery">Photo</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <i class="fas fa-heading"></i>
+            <input type="text" id="content-title" placeholder="Titre">
+        </div>
+        
+        <div class="form-group">
+            <i class="fas fa-align-left"></i>
+            <textarea id="content-desc" placeholder="Description"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <i class="fas fa-paperclip"></i>
+            <input type="file" id="content-image" accept="image/*,video/*">
+        </div>
+        
+        <p class="file-type-info" id="file-type-info">Images & vidéos acceptées</p>
+        
+        <div class="loader" id="loader">
+            <div class="loader-spinner"></div>
+            <p>Upload en cours...</p>
+        </div>
+        
+        <button onclick="addContent()" class="btn">
+            <i class="fas fa-cloud-upload-alt"></i> Ajouter
+        </button>
+    </div>
+</section>
+
+
+
+
+ <section class="contact-section" id="contact">
+        <h1 class="titlecnt autoDisplay"><span class="gradient">Contactez-nous</span> ✉️</h1>
+        <div class="content autoBlur">
+            <div class="container">
+                <main class="row">
+                    
+                    <section class="col left fadein-left">
+                        <div class="contactTitle">
+                            <h2>Prenez contact</h2>
+                            <p>N’hésite pas à nous contacter pour toute question concernant nos programmes, les admissions ou les opportunités de recherche. Nous sommes là pour te soutenir dans ton parcours académique.</p>
+                        </div>
+                        <div class="contactInfo">
+                            <div class="iconGroup">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="details">
+                                    <span>Phone</span>
+                                    <span>05.35.60.04.03</span>
+                                </div>
+                            </div>
+                            <div class="iconGroup">
+                                <div class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="details">
+                                    <span>Email</span>
+                                    <span>ensaf@usmba.ac.ma</span>
+                                </div>
+                            </div>
+                            <div class="iconGroup">
+                                <div class="icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="details">
+                                    <span>Location</span>
+                                    <span>Avenue My Abdallah Km 5 Route d'Imouzzer, Fès BP 72.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialMedia">
+                            <a href="https://www.facebook.com/p/%C3%89cole-Nationale-des-Sciences-Appliqu%C3%A9es-de-F%C3%A8s-100064166196367/?locale=fr_FR"><i class="fa-brands fa-facebook-f"></i></a>
+                            
+                            <a href="https://www.instagram.com/ensaf.usmba/?fbclid=IwY2xjawMhvTRleHRuA2FlbQIxMABicmlkETFGMmtFN0JGNThyWE1zRmI2AR7xNkm7xwNd_MVLTwtS4HCfPqYE5jwjGLCsIfuP_lQ4Ppup6mgETb9Gp-NzeQ_aem_egneHSu2X41JhKopLTUEzA"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/school/national-school-of-applied-sciences-of-fez/?originalSubdomain=fr"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </section>
+
+                    
+                    <section class="col right fadein-left">
+    <form class="messageForm" id="contactForm">
+        <div class="inputGroup halfWidth">
+            <input type="text" name="name" required="required">
+            <label>Votre Nom</label>
+        </div>
+        <div class="inputGroup halfWidth">
+            <input type="email" name="email" required="required">
+            <label>Email</label>
+        </div>
+        <div class="inputGroup fullWidth">
+            <input type="text" name="subject" required="required">
+            <label>sujet</label>
+        </div>
+        <div class="inputGroup fullWidth">
+            <textarea name="message" required="required"></textarea>
+            <label>Écrire un message</label>
+        </div>
+        <div class="inputGroup fullWidth">
+            <button type="submit">Envoyer</button>
+        </div>
+    </form>
+</section>
+                </main>
+            </div>
+        </div>
+    </section>
+
+
+<div class="footer">
+    <div class="footer-container container">
+        <div class="footer-box">
+            <h3>Logiciel et <span>IA</span></h3>
+            <a href="#" class="footer-link">Front-end</a>
+            <a href="#" class="footer-link">Back-end</a>
+            <a href="#" class="footer-link">Vision par ordinateur</a>
+            <a href="#" class="footer-link">IA</a>
+        </div>
+        <div class="footer-box footer-center">
+            <a href="#" class="logo">
+               ILIA
+            </a>
+            <p>Informatique et intelligence artificielle</p>
+            <div class="social">
+                <a href="#"><i class="ri-telegram-fill"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-whatsapp-line"></i></a>
+                <a href="#"><i class="ri-twitter-x-line"></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Liens <span>Importants</span></h3>
+            <a href="#home" class="footer-link">Accueil</a>
+            <a href="#aboutus" class="footer-link">À propos</a>
+            <a href="#skils" class="footer-link">Skill Insights </a>
+            <a href="#clubs" class="footer-link">Club</a>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
