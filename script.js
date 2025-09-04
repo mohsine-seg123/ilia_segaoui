@@ -167,6 +167,16 @@ const choisebutton = document.querySelectorAll(".choises");
 const btnnn = document.querySelectorAll(".hero-cta");
 clickSound.volume = 1.0;
 
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar"); 
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("activE");
+  navbar.classList.toggle("activE"); 
+  clickSound.play();
+});
+
 bttn.forEach(btn => {
     btn.addEventListener("click", () => {
         clickSound.currentTime = 0;
@@ -400,3 +410,4 @@ function escapeHtml(text) {
 window.addEventListener('load', () => {
     window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
 }); */
+
