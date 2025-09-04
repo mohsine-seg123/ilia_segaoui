@@ -3366,7 +3366,7 @@ textarea {
   .tag {
     font-size: 14px;
     padding: 12px 8px;
-    background-color: #b3b8d6;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     border-radius: 6px;
 
     width: 50px;
@@ -3429,4 +3429,5 @@ textarea {
 .filieres-tags a:nth-child(8) { animation-delay: 0.45s; }
 .filieres-tags a:nth-child(9) { animation-delay: 0.5s; }
 .filieres-tags a:nth-child(10) { animation-delay: 0.55s; }
+
 
