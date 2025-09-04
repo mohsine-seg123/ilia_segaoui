@@ -187,6 +187,171 @@ body{
   background: linear-gradient(135deg, #1a5adf, #5f1bbf);
 }
 
+/* ===== STYLES RESPONSIVES POUR MOBILE ===== */
+@media (max-width: 768px) {
+
+  #chatbot-icon {
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    z-index: 1000;
+    animation: none; 
+  }
+  
+
+  #chatbot-container {
+    bottom: 70px;
+    right: 10px;
+    width: 90%;
+    max-width: 320px;
+    height: 350px;
+    border-radius: 12px;
+    z-index: 1000;
+  }
+  
+
+  #chatbot-header {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+
+  #chatbot-body {
+    padding: 8px;
+    height: calc(100% - 110px);
+  }
+  
+
+  .message {
+    max-width: 85%;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+
+  #chatbot-input-container {
+    padding: 8px;
+    background-color: #fff;
+  }
+  
+  #chatbot-input {
+    padding: 10px;
+    font-size: 16px; 
+  }
+  
+  #send-btn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+ 
+  #close-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #chatbot-icon {
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  #chatbot-container {
+    bottom: 60px;
+    width: 85%;
+    height: 320px;
+  }
+  
+  .message {
+    max-width: 90%;
+    font-size: 13px;
+  }
+  
+  #chatbot-header {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  
+  #chatbot-input {
+    padding: 8px;
+  }
+  
+  #send-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 768px) and (orientation: landscape) {
+  #chatbot-container {
+    height: 250px;
+    bottom: 60px;
+  }
+  
+  #chatbot-body {
+    height: calc(100% - 100px);
+  }
+  
+  #chatbot-input-container {
+    padding: 6px;
+  }
+}
+
+
+@supports(padding: max(0px)) {
+  @media (max-width: 768px) {
+    #chatbot-container {
+      right: max(10px, env(safe-area-inset-right));
+      bottom: max(70px, env(safe-area-inset-bottom));
+    }
+    
+    #chatbot-icon {
+      right: max(15px, env(safe-area-inset-right));
+      bottom: max(15px, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  body.chatbot-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #chatbot-icon,
+  #close-btn,
+  #send-btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  #chatbot-input {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  #chatbot-icon {
+    transition: none;
+  }
+}
+
 
 
 
@@ -251,6 +416,7 @@ header {
   gap: 20px;
 }
 
+
 .nav-link {
   color: #d6d6ff;
   text-decoration: none;
@@ -314,7 +480,7 @@ header {
     0 0 30px rgba(255, 215, 0, 0.5);
 }
 
-/* Animation glow doré */
+
 @keyframes goldPulse {
   0% {
     box-shadow: 
@@ -335,6 +501,88 @@ header {
     transform: scale(1);
   }
 }
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #ffd700;
+  border-radius: 3px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar.activE {
+    display: flex;
+  }
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: black;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: none; 
+  }
+
+  .navbar.activE {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .nav-right{
+    display: none;
+  }
+
+  .nav.container{
+    max-width: 90%;
+  }
+
+  .logo{
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  body{
+    cursor: pointer;
+  }
+
+  .nav-link:hover{
+    color: #ffd700;
+  }
+}
+
+.menu-toggle.activE span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.activE span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.activE span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
 
 
 /*hero  */
@@ -544,7 +792,218 @@ header {
   mix-blend-mode:lighten;
 }
 
+/* ===== STYLES RESPONSIVES POUR LA HERO SUR MOBILE ===== */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .para {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+  
+  .para h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-main {
+    margin-left: 0;
+    justify-content: center;
+    position: relative;
+    bottom: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-cta {
+    margin-left: 0;
+    justify-content: center;
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+  }
+  
+  .icons-vid2 {
+    right: -10%;
+    top: -5%;
+  }
+  
+  .icons-vid2 video {
+    height: 500px;
+    width: 400px;
+  }
+}
 
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 15px;
+  }
+  
+  .para {
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding: 15px;
+  }
+  
+  .para h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  
+  .para h1 i {
+    font-size: 30px;
+  }
+  
+  .hero-main {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-main div {
+    width: 200px;
+    padding: 15px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hero-cta a {
+    width: 240px;
+    padding: 12px 5px;
+    text-align: center;
+  }
+  
+  .icons-vid2 {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 70px 10px;
+  }
+  
+  .para {
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .para h1 {
+    font-size: 1.5rem;
+  }
+  
+  .para h1 i {
+    font-size: 24px;
+  }
+  
+  .hero-main div {
+    width: 180px;
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .hero-main div i {
+    font-size: 18px;
+  }
+  
+  .hero-cta a {
+    width: 200px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  /* Ajustements pour les très petits écrans */
+  @media (max-height: 700px) {
+    .hero {
+      padding: 60px 10px;
+    }
+    
+    .para {
+      margin-bottom: 30px;
+    }
+    
+    .hero-main {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 60px 15px;
+    min-height: auto;
+    height: auto;
+  }
+  
+  .para {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  
+  .hero-main div {
+    width: 160px;
+    padding: 10px;
+  }
+  
+  .hero-cta {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .hero-cta a {
+    width: 180px;
+  }
+}
+
+
+@supports(padding: max(0px)) {
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: max(80px, env(safe-area-inset-top));
+      padding-left: max(15px, env(safe-area-inset-left));
+      padding-right: max(15px, env(safe-area-inset-right));
+      padding-bottom: max(15px, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .hero h1, 
+  .hero p, 
+  .hero-cta a, 
+  .nav-link, 
+  .nav-right i, 
+  .hero-main {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hero-main div,
+  .hero-cta a {
+    transition: none;
+  }
+}
 
 
 /* styles for the pages */
@@ -2098,8 +2557,6 @@ Section p {
 }
 
 
-
-
 .upload-form {
     background: #111; 
     border-radius: 15px;
@@ -2236,223 +2693,670 @@ textarea {
 
 
 
+/* ========== RESPONSIVE MOBILE MODERNE ========== */
+@media (max-width: 768px) {
 
-
-/* responsive */
-
-@media screen and (max-width: 1024px) {
-  /* Navbar */
-  .nav.container {
-    flex-wrap: wrap;
-    justify-content: space-between;
+  /* About section responsive */
+  .aboutus {
+    padding: 30px 15px;
   }
-
-  .navbar {
-    gap: 10px;
+  
+  .tit {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
   }
-
-  /* Hero */
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-main div {
-    font-size: 0.9rem;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Aboutus */
-  .aboutus h1.tit {
-    font-size: 2rem;
-  }
-
-  .ilia1-titles {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .content-about {
-    flex-direction: column;
-  }
-
-  /* Skills */
-  .skills-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skills-image img.brain-img {
-    max-width: 250px;
-    margin: 20px 0;
-  }
-
-  /* Courses */
-  .choises {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .modules {
-    flex-direction: column;
-  }
-
-  .modules .semestre .modul div {
-    font-size: 0.85rem;
-  }
-
-  /* Clubs */
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Contact */
-  .contact-section .container main {
-    flex-direction: column;
-  }
-
-  .contact-section .col {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  /* Footer */
-  .footer-container {
-    flex-direction: column;
+  
+  .ilia1 {
     align-items: center;
     text-align: center;
-    gap: 20px;
+  }
+  
+  .ilia1-titles {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 15px;
+  }
+  
+  .ilia1 h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+  
+  .ilia1 p {
+    max-width: 100%;
+    font-size: 16px;
+    margin-left: 0;
+  }
+  
+  .content-about {
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+  }
+  
+  .profil-section {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .profil-title {
+    font-size: 1.3rem;
+  }
+  
+  .multiple-text {
+    font-size: 1.1rem;
+  }
+  
+
+
+
+
+  /* Skills section responsive */
+  .skills {
+    padding: 30px 15px;
+  }
+  
+  .skills-title {
+    font-size: 1.8rem;
+    margin-top: 40px;
+  }
+  
+  .skills-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .IA, .Dev {
+    width: 100%;
+  }
+  
+  .ia-tech-badges, .dev-tech-badges {
+    justify-content: center;
+  }
+  
+  .tech-tag {
+    font-size: 14px;
+    padding: 8px 14px;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.2;
+    border-radius: 20px;
+    margin: 4px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    min-height: 32px;
+}
+
+.tech-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+  
+  .skills-image {
+    width: 70%;
+  }
+  
+  .slider {
+    position: relative;
+    right: auto;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+
+
+  /* Courses section responsive */
+  .courses {
+    padding: 30px 15px;
+  }
+  
+  .courses h2 {
+    font-size: 1.5rem;
+    top: 50px;
+  }
+  
+  .courses p {
+    margin-top: 70px;
+    font-size: 16px;
+  }
+  
+  .choises {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .modules {
+    gap: 30px;
+  }
+  
+  .semestre {
+    width: 100%;
+  }
+  
+  /* Clubs section responsive */
+  .Section {
+    padding: 30px 15px;
+  }
+  
+  .Section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .sub-section {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gallery-item {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .upload-form {
+    width: 100%;
+    padding: 20px;
+  }
+  .upload-form h3 {
+    font-size: 1.3rem;
+  }
+
+  
+  /* Footer responsive */
+  .footer {
+    padding: 0 15px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer-link::before {
+    display: none;
+  }
+  
+  .footer-center {
+    order: -1;
+  }
+  
+
+  /* Utility classes for mobile */
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
+  
+  .text-center-mobile {
+    text-align: center !important;
   }
 }
 
-/* --------- Mobiles --------- */
-@media screen and (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  /* Hero */
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-main div {
-    font-size: 0.8rem;
-  }
-
-  .hero-cta {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  /* Aboutus */
-  .aboutus h1.tit {
+/* Extra small devices */
+@media (max-width: 480px) {
+  .para h1 {
     font-size: 1.5rem;
   }
-
-  .ilia1-titles {
-    flex-direction: column;
+  
+  .hero-main div {
+    width: 180px;
+    padding: 10px;
+    font-size: 14px;
   }
-
-  .content-about {
-    flex-direction: column;
+  
+  .hero-cta a {
+    width: 200px;
+    padding: 10px 15px;
+    font-size: 14px;
   }
-
-  .content-about .profil-section {
-    text-align: center;
-  }
-
-  /* Skills */
-  .skills-content {
-    gap: 20px;
-  }
-
-  .skills-image img.brain-img {
-    max-width: 200px;
-  }
-
-  /* Courses */
-  .choises button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .modules .semestre .modul div {
-    font-size: 0.8rem;
-  }
-
-  /* Clubs */
-  .grid, .gallery {
+  
+  .filieres-tags {
     grid-template-columns: 1fr;
   }
+  
+  .tech-tag {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .card1 .icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
-  /* Contact */
-  .contact-section .col {
+/* Landscape orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 60px 15px;
+    min-height: auto;
+    height: auto;
+  }
+  
+  .hero-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-cta {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .navbar {
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+}
+
+
+/* Support des zones sécurisées pour les appareils avec encoches */
+@supports(padding: max(0px)) {
+  @media (max-width: 768px) {
+    .hero,
+    .aboutus,
+    .skills,
+    .courses,
+    .Section,
+    .contact-section {
+      padding-left: max(15px, env(safe-area-inset-left));
+      padding-right: max(15px, env(safe-area-inset-right));
+    }
+    
+    .hero {
+      padding-top: max(80px, env(safe-area-inset-top));
+    }
+    
+    .footer {
+      padding-bottom: max(15px, env(safe-area-inset-bottom));
+    }
+    
+    #chatbot-icon {
+      right: max(15px, env(safe-area-inset-right));
+      bottom: max(15px, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* Animations optimisées pour mobile */
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .nav-link,
+  .hero-cta a,
+  .hero-main div,
+  .tech-tag,
+  .choises button,
+  .tag,
+  .card,
+  .gallery-item,
+  .upload-form button,
+  .messageForm button,
+  #chatbot-icon,
+  #close-btn,
+  #send-btn {
+    min-height: 44px;
+    min-width: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  input, select, textarea {
+    font-size: 16px; 
+  }
+}
+
+
+
+/* Optimisation des performances sur mobile */
+@media (max-width: 768px) {
+   .front-vid {
+    display: none;
+  }
+  
+   .courses {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+
+
+
+
+
+ /* ========== CONTACT RESPONSIVE FIX ========== */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+    min-height: auto;
+  }
+  
+  .titlecnt {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .contact-section .content {
     width: 100%;
   }
-
-  .messageForm .inputGroup label {
-    font-size: 0.9rem;
+  
+  .contact-section .container {
+    width: 100%;
+    padding: 0;
   }
-
-  .messageForm input, .messageForm textarea {
-    font-size: 0.9rem;
+  
+  .container .row {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
   }
-
-  /* Footer */
-  .footer-container {
+  
+  .contact-section .container .left,
+  .contact-section .container .right {
+    min-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Correction spécifique pour le formulaire */
+  .contact-section .container .right .messageForm {
+    display: flex;
     flex-direction: column;
     gap: 15px;
   }
+  
+  .contact-section .container .right .messageForm .inputGroup {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+  
+  /* Ajustement des champs du formulaire */
+  .inputGroup.halfWidth {
+    width: 100%;
+  }
+  
+  /* Amélioration de l'apparence sur mobile */
+  .contact-section .container .left {
+    order: 2;
+  }
+  
+  .contact-section .container .right {
+    order: 1;
+  }
+  
+  /* Ajustement des icônes */
+  .iconGroup {
+    margin: 20px 0;
+  }
+  
+  .socialMedia {
+    justify-content: center;
+    margin-top: 25px;
+  }
+  
+  /* Bouton d'envoi */
+  .contact-section .container .right .messageForm button {
+    width: 100%;
+    margin-top: 15px;
+  }
 }
 
-/* --------- Petits Mobiles --------- */
-@media screen and (max-width: 480px) {
-  /* Hero */
-  .hero h1 {
-    font-size: 1.4rem;
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 30px 10px;
   }
-
-  .hero-main div {
-    font-size: 0.7rem;
+  
+  .titlecnt {
+    font-size: 1.6rem;
   }
-
-  /* Aboutus */
-  .aboutus h1.tit {
-    font-size: 1.2rem;
+  
+  .contact-section .container .left,
+  .contact-section .container .right {
+    padding: 15px;
   }
-
-  .content-about p {
-    font-size: 0.85rem;
+  
+  .contactInfo .iconGroup .details span {
+    font-size: 14px;
   }
+}
 
-  /* Skills */
-  .skills h1.gradient {
-    font-size: 1.5rem;
+
+/* ========== RESPONSIVE ENSA-FES MOBILE ========== */
+@media (max-width: 1024px) {
+  .ensa-fes {
+    margin-top: 120px;
+    padding: 0 20px;
   }
-
-  /* Courses */
-  .modules .semestre .modul div {
-    font-size: 0.75rem;
+  
+  .sectionTitle {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 50px;
   }
-
-  /* Contact */
-  .contact-section h1.titlecnt {
-    font-size: 1.5rem;
+  
+  .info-cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 90%;
   }
+  
+  .card1, .card2 {
+    height: auto;
+    min-height: 450px;
+  }
+  
+  .filieres-tags {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 180px;
+  }
+}
 
-  .messageForm button {
-    font-size: 0.9rem;
+@media (max-width: 768px) {
+  .ensa-fes {
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .info-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .card1, .card2 {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding: 20px;
+  }
+  
+  .card1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card1 h1 {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    width: 100%;
+  }
+  
+  .card1 p {
+    position: relative;
+    bottom: auto;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 15px 0;
+  }
+  
+  .card1 img {
+    width: 50%;
+    height: auto;
+    margin: 15px 0;
+  }
+  
+  .card1 .icons {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .card1 .icons a {
+    justify-content: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .card2 {
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .card2 h1 {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .card2 img {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 50%;
+    height: auto;
+    margin: 0 0 20px 0;
+  }
+  
+  .filieres-tags {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+  }
+  
+  .tag {
+    font-size: 14px;
     padding: 8px 12px;
+    width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .ensa-fes {
+    margin-top: 50px;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+  }
+  
+  .card1, .card2 {
+    min-height: 380px;
+    padding: 15px;
+  }
+  
+  .card1 h1, .card2 h1 {
+    font-size: 20px;
+  }
+  
+  .card1 p {
+    font-size: 14px;
+  }
+  
+  .card1 img, .card2 img {
+    width: 60%;
+  }
+  
+  .filieres-tags {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .tag {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  
+  .card1 .icons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .card1 .icons a {
+    font-size: 13px;
+  }
+}
+
+/* Mode paysage */
+@media (max-width: 768px) and (orientation: landscape) {
+  .card1, .card2 {
+    min-height: 350px;
+  }
+  
+  .filieres-tags {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Support des encoches */
+@supports(padding: max(0px)) {
+  @media (max-width: 768px) {
+    .ensa-fes {
+      padding-left: max(15px, env(safe-area-inset-left));
+      padding-right: max(15px, env(safe-area-inset-right));
+    }
+  }
+}
+
