@@ -3151,8 +3151,6 @@ textarea {
   }
 }
 
-
-/* ========== RESPONSIVE ENSA-FES MOBILE ========== */
 @media (max-width: 1024px) {
   .ensa-fes {
     margin-top: 120px;
@@ -3174,11 +3172,6 @@ textarea {
   .card1, .card2 {
     height: auto;
     min-height: 450px;
-  }
-  
-  .filieres-tags {
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 180px;
   }
 }
 
@@ -3278,19 +3271,6 @@ textarea {
     margin: 0 0 20px 0;
   }
   
-  .filieres-tags {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 20px;
-    padding: 15px;
-    width: 100%;
-  }
-  
-  .tag {
-    font-size: 14px;
-    padding: 8px 12px;
-    width: 100%;
-  }
 }
 
 @media (max-width: 480px) {
@@ -3318,17 +3298,7 @@ textarea {
   .card1 img, .card2 img {
     width: 60%;
   }
-  
-  .filieres-tags {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  
-  .tag {
-    font-size: 13px;
-    padding: 8px 10px;
-  }
-  
+
   .card1 .icons {
     flex-direction: column;
     gap: 12px;
@@ -3344,10 +3314,6 @@ textarea {
   .card1, .card2 {
     min-height: 350px;
   }
-  
-  .filieres-tags {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* Support des encoches */
@@ -3361,3 +3327,141 @@ textarea {
 }
 
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .filieres-tags {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filieres-tags {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+  
+  .tag {
+    font-size: 15px;
+    padding: 14px 10px;
+    min-height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filieres-tags {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+
+  .filieres-tags a{
+    min-height: 48px;
+    margin-top: 4px;
+    width: 40px;
+  }
+  
+  .tag {
+    font-size: 14px;
+    padding: 12px 8px;
+    background-color: #b3b8d6;
+    border-radius: 6px;
+
+    width: 50px;
+    min-height: 48px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .filieres-tags {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 0 10px;
+  }
+
+  .filieres-tags a{
+    min-height: 44px;
+    margin-top: 4px;
+    width: 40px;
+  }
+  
+  .tag {
+    font-size: 14px;
+    padding: 12px 8px;
+    background-color: #b3b8d6;
+    border-radius: 6px;
+
+    width: 50px;
+    min-height: 48px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Mode paysage sur mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .filieres-tags {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Support des écrans très larges */
+@media (min-width: 1600px) {
+  .filieres-tags {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Support des encoches (notch) */
+@supports(padding: max(0px)) {
+  .filieres-tags {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  
+  @media (max-width: 768px) {
+    .filieres-tags {
+      padding-left: max(12px, env(safe-area-inset-left));
+      padding-right: max(12px, env(safe-area-inset-right));
+    }
+  }
+}
+
+/* Animation subtile au chargement */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filieres-tags a {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.filieres-tags a:nth-child(1) { animation-delay: 0.1s; }
+.filieres-tags a:nth-child(2) { animation-delay: 0.15s; }
+.filieres-tags a:nth-child(3) { animation-delay: 0.2s; }
+.filieres-tags a:nth-child(4) { animation-delay: 0.25s; }
+.filieres-tags a:nth-child(5) { animation-delay: 0.3s; }
+.filieres-tags a:nth-child(6) { animation-delay: 0.35s; }
+.filieres-tags a:nth-child(7) { animation-delay: 0.4s; }
+.filieres-tags a:nth-child(8) { animation-delay: 0.45s; }
+.filieres-tags a:nth-child(9) { animation-delay: 0.5s; }
+.filieres-tags a:nth-child(10) { animation-delay: 0.55s; }
