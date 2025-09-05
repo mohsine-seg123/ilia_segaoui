@@ -416,4 +416,43 @@ window.addEventListener('load', () => {
     window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
 }); */
 
+const form = document.getElementById('contactForm');
+const accessKey = '965cc24d-ba19-4a8c-86b6-aaa06896efc0'; 
+const formMessage = document.getElementById('formMessage');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+   formMessage.textContent = "Envoi en cours...";
+  formMessage.className = "form-message info";
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    object['access_key'] = accessKey;
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(object)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+      formMessage.textContent = "✅ Votre message a été envoyé avec succès !";
+      formMessage.className = "form-message success";
+      form.reset();
+    } else {
+      formMessage.textContent = "❌ Une erreur est survenue, veuillez réessayer.";
+      formMessage.className = "form-message error";
+    }
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+    formMessage.textContent = "⚠️ Une erreur de connexion est survenue.";
+    formMessage.className = "form-message error";
+  });
+});
 
